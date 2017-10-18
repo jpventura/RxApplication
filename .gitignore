@@ -1,0 +1,15 @@
+# Android Studio
+*.iml
+.DS_Store
+.externalNativeBuild
+.gradle
+/.idea
+/build
+/captures
+/local.properties
+
+# Emacs
+*~
+.*
+.\#*
+\#*
