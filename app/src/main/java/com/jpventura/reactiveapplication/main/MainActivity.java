@@ -13,6 +13,8 @@ import com.jpventura.reactiveapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    private MainContract.Presenter mPresenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        MainFragment fragment = (MainFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.fragment);
+
+        mPresenter = new MainPresenter(fragment);
     }
 
     @Override
